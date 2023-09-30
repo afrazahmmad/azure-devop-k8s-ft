@@ -12,7 +12,7 @@ pool:
 jobs:
   - job: Job1
     steps:
-    - script: echo Job 1 Hello, world!
+    - script: echo Job 1
       displayName: 'Run a one-line script, changed'
     - script: |
             echo Add other tasks to build, test, and deploy your project.
@@ -22,13 +22,13 @@ jobs:
   - job: Job2
     dependsOn: Job1
     steps:
-    - script: echo Job 2 Hello, world!
+    - script: echo Job 2
     displayName: 'Run a one-line script, changed'
 
   - job: Job3
     dependsOn: Job1
     steps:
-    - script: echo Job 3 Hello, world!
+    - script: echo Job 3
     displayName: 'Run a one-line script, changed'
 
   - job: Job4
@@ -36,5 +36,5 @@ jobs:
     - Job2
     - Job3
     steps:
-    - script: echo Job 3 Hello, world!
+    - script: echo Job 4
     displayName: 'Run a one-line script, changed'
