@@ -43,3 +43,4 @@ stages:
   - job: ProdDeployJob
     steps:
     - bash: echo $(environment)DeployJob
+    - bash: echo $(Build.BuildNumber)
