@@ -44,3 +44,4 @@ stages:
     steps:
     - bash: echo $(environment)DeployJob
     - bash: echo $(Build.BuildNumber)
+    - bash: ls -R $(System.DefaultWorkingDirectory)
