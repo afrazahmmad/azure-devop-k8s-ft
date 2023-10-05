@@ -5,7 +5,7 @@ strategy:
  matrix:
   linux:
    operatingSystem: 'ubuntu-latest'
-  max:
+  mac:
    operatingSystem: 'macos-latest'
 
 
