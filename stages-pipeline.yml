@@ -45,3 +45,7 @@ stages:
     - bash: echo $(environment)DeployJob
     - bash: echo $(Build.BuildNumber)
     - bash: ls -R $(System.DefaultWorkingDirectory)
+    - bash: echo node --version
+    - bash: echo java --version
+    - bash: echo python --version
+    - bash: echo mvn --version
