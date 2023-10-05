@@ -49,3 +49,14 @@ stages:
     - bash: echo java --version
     - bash: echo python --version
     - bash: echo mvn --version
+    - bash: ls -R $(Build.DefaultArtifactStagingDirectory)
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: '$(System.DefaultWorkingDirectory)'
+        Contents: |
+          **/*.yaml
+          **/*.tf
+        TargetFolder: '$(Build.DefaultArtifactStagingDirectory)'
+    - bash: ls -R $(Build.DefaultArtifactStagingDirectory)
+    
+ 
