@@ -24,10 +24,24 @@ stages:
   - job:
     steps:
     - bash: echo "Deploy the dev site"
+  - deployment: 
+    environment: Dev
+    strategy:
+     runOnce:
+       deploy:
+         steps:
+           - bash: echo "Deploy a dev site using deployment"
 - stage: QAStage
   jobs:
   - job: 
     steps:
     - bash: echo "Deploy the QA site"
+  - deployment: 
+    environment: QA
+    strategy:
+     runOnce:
+       deploy:
+         steps:
+         - bash: echo "Deploy the site using QA environment"
 
 
